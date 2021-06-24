@@ -1,12 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+const express = require('express')
+let bodyParser = require('body-parser')
+const app = express()
 
-ReactDOM.render(
-  <React.StrictMode>
-      <App/>
-  </React.StrictMode>,
-  document.getElementById('root')
-);
-reportWebVitals();
+//helpers
+app.use(bodyParser.json())
+
+//router
+app.use('/api/home',require('./components/home'))
+app.use('/api/auth',require('./components/auth'))
+
+//listener
+app.listen(5500)

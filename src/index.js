@@ -5,7 +5,7 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App title={'title from index props'}/>
+      <App/>
   </React.StrictMode>,
   document.getElementById('root')
 );
